@@ -1,5 +1,5 @@
 {
-  description = "A cross-platform development environment for OpenGL";
+  description = "OpenGL";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -14,20 +14,15 @@
       {
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
-            # Build Tools
             cmake
             pkg-config
             gnumake
-
-            # OpenGL Core Libraries
             libGL
             glfw
             glew
             glm
             python314Packages.glad
             imgui
-
-            # X11 Dependencies (Often required for GLFW/Windowing)
             xorg.libX11
             xorg.libXcursor
             xorg.libXrandr
@@ -43,9 +38,7 @@
                 glfw
                 xorg.libX11
               ])
-            }"
-            echo "--- OpenGL Development Environment Loaded ---"
-            echo "GLFW, GLEW, GLM, and GLAD are available."
+            }
           '';
         };
       }
