@@ -25,16 +25,21 @@ This should get the program running.
 
 I found some old render code I made a year back with OpenGL, and figured I wanted to build a simulation with it. Anyhow, one challenge I've had in my time with FRC was tuning the PID for my team's swerve drive, so decided it'd be cool to put it to use. 
 
-To start, les quickly go over what Proportional Integral Derivative (PID) is: 
+I found some old OpenGL render code from last year and used it to build a quick swerve-drive PID tuning sim. PID is a closed-loop controller that turns error into correction using three terms: P (current error), I (accumulated error), and D (rate of change). In the sim, I run two PID controllers: one drives translation toward the mouse cursor, and the other rotates the robot to face it, with a simple camera view for visualization.
 
-<img width="889" height="134" alt="image" src="https://github.com/user-attachments/assets/aa303a18-5415-407f-8b9e-7eeb84543c97" />
+Here is a preview of it: 
 
-It looks pretty scary but it essentially is that if you have some error adjusting to K_p is a direct multiplier to it, K_i is a multiplier to the accumalation of all previous errors (or the integration of it), meanwhile K_d is a multiplier to the instant rate of change (or derivative to the error). Tuning these values is a closed-loop control method where eventually, continuous apppication of the PID will turn the error to 0 on its own. 
+<img width="2516" height="1301" alt="image" src="https://github.com/user-attachments/assets/368a187a-7f4c-49fa-831b-568dfffedc70" />
 
-The simulation tests its effect on a swerve drive + a simulated camera view (I work on a lot of vision and stuff sooooo). The two PID instance are applied to the error in the translation to the mouse cursor and the rotation to the cursor. 
+How it essentially works is that you can see the effects of the robot's drive from tuning the PID of either the translation or rotation and also the camera view to see how the drive might be seeing the cursor and stuff. This is pretty similar to how the PID works in swerve drives:
 
-Ok, there's 3 values to it. What does each of them do? Les start with the P. P is the proportion and directly multiplies to the error. 
+Oh, and just one small clarification bit, but on the camera, you'd see the coloured walls and stuff, they're essentially the world barriers that are kinda out of view from the map, but they are as follows. 
 
+<img width="1083" height="1091" alt="image" src="https://github.com/user-attachments/assets/af465a15-aa16-4474-b511-44bf6d554a0b" />
+
+The blue are the walls along the y-axis and the red are the walls along the x-axis. They're there for some visual clarity. 
+
+Anyways, here's a video of me playing around with it, video link: 
 
 
 
