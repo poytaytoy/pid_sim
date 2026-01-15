@@ -61,8 +61,7 @@ Anyways, here's a video of me playing around with it:
   </a>
 </p>
 
-
-
+From the video, you can see that the P does most of the work. Things only behave normally when its set to some value. Meanwhile, I is complete chaos but that's expected since it's essentially an indefinite accumalation of the errors. Derivative acts as it should where only a quick change in the mouse point's location forces movement. But yeah, that's about it. 
 
 
 
