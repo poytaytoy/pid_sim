@@ -27,6 +27,8 @@ I found some old render code I made a year back with OpenGL, and figured I wante
 
 I found some old OpenGL render code from last year and used it to build a quick swerve-drive PID tuning sim. PID is a closed-loop controller that turns error into correction using three terms: P (current error), I (accumulated error), and D (rate of change). In the sim, I run two PID controllers: one drives translation toward the mouse cursor, and the other rotates the robot to face it, with a simple camera view for visualization.
 
+## Preview
+
 Here is a preview of it: 
 
 <p align="center">
@@ -42,12 +44,23 @@ Oh, and just one small clarification bit, but on the camera, you'd see the colou
 <p align="center">
   <img src="https://github.com/user-attachments/assets/af465a15-aa16-4474-b511-44bf6d554a0b"
        alt="World barriers"
-       width="600" />
+       width="300" />
 </p>
 
 The blue are the walls along the y-axis and the red are the walls along the x-axis. They're there for some visual clarity. 
 
-Anyways, here's a video of me playing around with it, video link: 
+## Video 
+
+Anyways, here's a video of me playing around with it: 
+
+<p align="center">
+  <a href="https://youtu.be/Q9LbukTRu00">
+    <img src="https://img.youtube.com/vi/Q9LbukTRu00/maxresdefault.jpg"
+         alt="PID Sim Demo"
+         width="900" />
+  </a>
+</p>
+
 
 
 
